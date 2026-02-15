@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | N2 Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#FFD700',
+                            dark: '#0a0a0a',
+                            neon: '#00f3ff',
+                            purple: '#bc13fe'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-brand-dark text-white overflow-x-hidden selection:bg-brand-neon selection:text-black">
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition"
+        class="fixed inset-0 bg-black z-50 flex items-center justify-center transition-transform duration-700 transform translate-y-0">
+        <div class="text-4xl md:text-6xl font-display font-bold text-brand-neon animate-pulse">
+            N2 <span class="text-white">PORTFOLIO</span>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="bg-black/90 text-xs py-2 px-4 border-b border-white/10 flex justify-between items-center z-40 relative">
+        <div class="flex items-center gap-4">
+            <span class="text-brand-gold font-bold"><i class="fas fa-map-marker-alt mr-1"></i> BASED IN SRI LANKA</span>
+            <span class="hidden sm:inline text-gray-400">|</span>
+            <span class="hidden sm:inline text-gray-400"><i class="fas fa-envelope mr-1"></i>
+                n2marketings999@gmail.com</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="text-gray-400">Visits:</span>
+            <div id="visitor-count"
+                class="bg-brand-purple/20 px-2 py-0.5 rounded text-brand-purple font-mono font-bold">00000</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-40 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-brand-neon to-brand-purple rounded-lg flex items-center justify-center font-display font-bold text-black text-xl mr-3 group-hover:scale-110 transition-transform">
+                        N2</div>
+                    <span class="text-2xl font-display font-bold tracking-tighter">N2 <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-purple">AGENCY</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-400 hover:text-brand-neon transition-colors font-medium">Home</a>
+                    <a href="services.html"
+                        class="text-gray-400 hover:text-brand-neon transition-colors font-medium">Services</a>
+                    <a href="work.html"
+                        class="text-white hover:text-brand-neon transition-colors font-medium border-b-2 border-brand-neon">Work</a>
+                    <a href="pricing.html"
+                        class="text-gray-400 hover:text-brand-neon transition-colors font-medium">Pricing</a>
+                    <a href="contact.html"
+                        class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-brand-neon transition-all hover:scale-105 border-2 border-transparent">Contact
+                        Us</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-black border-b border-white/10 p-4 flex flex-col space-y-4">
+            <a href="index.html" class="text-gray-400 hover:text-brand-neon block py-2 border-b border-white/5">Home</a>
+            <a href="services.html"
+                class="text-gray-400 hover:text-brand-neon block py-2 border-b border-white/5">Services</a>
+            <a href="work.html" class="text-white hover:text-brand-neon block py-2 border-b border-white/5">Work</a>
+            <a href="pricing.html"
+                class="text-gray-400 hover:text-brand-neon block py-2 border-b border-white/5">Pricing</a>
+            <a href="contact.html" class="text-brand-neon font-bold block py-2">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-20 bg-black relative">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-8xl font-display font-bold mb-6" data-aos="fade-down">SELECTED <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-purple">WORKS</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto" data-aos="fade-up">A showcase of our best designs, from
+                logos to custom apparel.</p>
+        </div>
+    </header>
+
+    <!-- Gallery -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4">
+            <!-- Filter Buttons (Visual Only for now) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button
+                    class="px-6 py-2 rounded-full bg-white text-black font-bold hover:bg-brand-neon transition-colors">All</button>
+                <button
+                    class="px-6 py-2 rounded-full border border-white/20 hover:bg-white/10 transition-colors">T-Shirts</button>
+                <button
+                    class="px-6 py-2 rounded-full border border-white/20 hover:bg-white/10 transition-colors">Thumbnails</button>
+                <button
+                    class="px-6 py-2 rounded-full border border-white/20 hover:bg-white/10 transition-colors">Logos</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=2564&auto=format&fit=crop"
+                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                        alt="Work 1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-brand-neon text-sm font-bold mb-1">T-SHIRT DESIGN</span>
+                        <h3 class="text-2xl font-bold">Urban Streetwear</h3>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="https://media.istockphoto.com/id/1199015942/vector/neon-glowing-arrow-pointer-on-dark-background-colorful-and-shining-retro-light-sign-vector.jpg?s=612x612&w=0&k=20&c=6F0J-m8qVv5Z3f5f3_0N3X8e4q5v5z5f3F5f3F5f3F5"
+                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                        alt="Work 2">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-brand-purple text-sm font-bold mb-1">YOUTUBE THUMBNAIL</span>
+                        <h3 class="text-2xl font-bold">Gaming Channel Art</h3>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?q=80&w=2671&auto=format&fit=crop"
+                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                        alt="Work 3">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-sm font-bold mb-1">LOGO DESIGN</span>
+                        <h3 class="text-2xl font-bold">Tech Startup Brand</h3>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1503341338985-c0477be52513?q=80&w=2670&auto=format&fit=crop"
+                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                        alt="Work 4">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-brand-gold text-sm font-bold mb-1">LOGO DESIGN</span>
+                        <h3 class="text-2xl font-bold">Coffee Brand Identity</h3>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=2527&auto=format&fit=crop"
+                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                        alt="Work 5">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-brand-neon text-sm font-bold mb-1">T-SHIRT DESIGN</span>
+                        <h3 class="text-2xl font-bold">Apparel Collection</h3>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2671&auto=format&fit=crop"
+                        class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                        alt="Work 6">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-brand-purple text-sm font-bold mb-1">YOUTUBE THUMBNAIL</span>
+                        <h3 class="text-2xl font-bold">Vlog Cover Art</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+                <p class="text-gray-500 text-sm">© 2024 N2 Marketing. All rights reserved.</p>
+                <p class="text-gray-500 text-sm font-mono border border-white/10 px-3 py-1 rounded bg-white/5">
+                    DEV BY <span class="text-brand-neon">NADULA METHSAN</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

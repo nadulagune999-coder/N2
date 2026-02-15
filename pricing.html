@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | N2 Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#FFD700',
+                            dark: '#0a0a0a',
+                            neon: '#00f3ff',
+                            purple: '#bc13fe'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-brand-dark text-white overflow-x-hidden selection:bg-brand-neon selection:text-black">
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition"
+        class="fixed inset-0 bg-black z-50 flex items-center justify-center transition-transform duration-700 transform translate-y-0">
+        <div class="text-4xl md:text-6xl font-display font-bold text-brand-neon animate-pulse">
+            N2 <span class="text-white">PRICING</span>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="bg-black/90 text-xs py-2 px-4 border-b border-white/10 flex justify-between items-center z-40 relative">
+        <div class="flex items-center gap-4">
+            <span class="text-brand-gold font-bold"><i class="fas fa-map-marker-alt mr-1"></i> BASED IN SRI LANKA</span>
+            <span class="hidden sm:inline text-gray-400">|</span>
+            <span class="hidden sm:inline text-gray-400"><i class="fas fa-envelope mr-1"></i>
+                n2marketings999@gmail.com</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="text-gray-400">Visits:</span>
+            <div id="visitor-count"
+                class="bg-brand-purple/20 px-2 py-0.5 rounded text-brand-purple font-mono font-bold">00000</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-40 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-brand-neon to-brand-purple rounded-lg flex items-center justify-center font-display font-bold text-black text-xl mr-3 group-hover:scale-110 transition-transform">
+                        N2</div>
+                    <span class="text-2xl font-display font-bold tracking-tighter">N2 <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-purple">AGENCY</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-400 hover:text-brand-neon transition-colors font-medium">Home</a>
+                    <a href="services.html"
+                        class="text-gray-400 hover:text-brand-neon transition-colors font-medium">Services</a>
+                    <a href="work.html"
+                        class="text-gray-400 hover:text-brand-neon transition-colors font-medium">Work</a>
+                    <a href="pricing.html"
+                        class="text-white hover:text-brand-neon transition-colors font-medium border-b-2 border-brand-neon">Pricing</a>
+                    <a href="contact.html"
+                        class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-brand-neon transition-all hover:scale-105 border-2 border-transparent">Contact
+                        Us</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-black border-b border-white/10 p-4 flex flex-col space-y-4">
+            <a href="index.html" class="text-gray-400 hover:text-brand-neon block py-2 border-b border-white/5">Home</a>
+            <a href="services.html"
+                class="text-gray-400 hover:text-brand-neon block py-2 border-b border-white/5">Services</a>
+            <a href="work.html" class="text-gray-400 hover:text-brand-neon block py-2 border-b border-white/5">Work</a>
+            <a href="pricing.html"
+                class="text-gray-400 hover:text-brand-neon block py-2 border-b border-white/5">Pricing</a>
+            <a href="contact.html" class="text-brand-neon font-bold block py-2">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-20 bg-black text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-display font-bold mb-6" data-aos="fade-down">SIMPLE <span
+                    class="text-brand-neon">PRICING</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto" data-aos="fade-up">Transparent pricing for top-tier
+                design services. No hidden fees.</p>
+        </div>
+    </header>
+
+    <!-- Pricing Cards -->
+    <section class="py-10 pb-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Card 1: Thumbnails -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="absolute top-0 right-0 p-4 opacity-10 text-9xl font-bold font-display text-white pointer-events-none">
+                        01</div>
+                    <i class="fab fa-youtube text-4xl text-red-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-2">Thumbnails</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Best for YouTubers wanting high click-through rates.</p>
+                    <div class="text-4xl font-bold font-display mb-6 text-white">$10<span
+                            class="text-lg text-gray-500 font-sans font-normal">/design</span></div>
+
+                    <ul class="space-y-3 mb-8 text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> High Resolution
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> 24h Delivery
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> Unlimited
+                            Revisions</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> Source File
+                            Included</li>
+                    </ul>
+
+                    <a href="contact.html"
+                        class="block w-full py-3 text-center border border-white/20 rounded-full font-bold hover:bg-white hover:text-black transition-colors">Order
+                        Now</a>
+                </div>
+
+                <!-- Card 2: Logos (Featured) -->
+                <div class="bg-gradient-to-b from-brand-neon/10 to-brand-purple/10 border border-brand-neon/30 rounded-3xl p-8 hover:-translate-y-4 transition-all duration-500 relative overflow-hidden shadow-[0_0_30px_rgba(0,243,255,0.1)]"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="absolute top-0 right-0 bg-brand-neon text-black text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        POPULAR</div>
+                    <i class="fas fa-vector-square text-4xl text-brand-gold mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-2">Logo Design</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Complete brand identity solution for new businesses.</p>
+                    <div class="text-4xl font-bold font-display mb-6 text-white">$45<span
+                            class="text-lg text-gray-500 font-sans font-normal">/project</span></div>
+
+                    <ul class="space-y-3 mb-8 text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> 3 Unique
+                            Concepts</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> Vector & Social
+                            Files</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> Brand Style
+                            Guide</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold"></i> Full Ownership
+                        </li>
+                    </ul>
+
+                    <a href="contact.html"
+                        class="block w-full py-3 text-center bg-brand-neon text-black rounded-full font-bold hover:bg-white transition-colors box-shadow-neon">Get
+                        Started</a>
+                </div>
+
+                <!-- Card 3: T-Shirts -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute top-0 right-0 p-4 opacity-10 text-9xl font-bold font-display text-white pointer-events-none">
+                        03</div>
+                    <i class="fas fa-tshirt text-4xl text-brand-purple mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-2">Apparel</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Custom graphics for your merchandise line.</p>
+                    <div class="text-4xl font-bold font-display mb-6 text-white">$25<span
+                            class="text-lg text-gray-500 font-sans font-normal">/design</span></div>
+
+                    <ul class="space-y-3 mb-8 text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> Print-Ready
+                            Files</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> 3D Mockups</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> Commercial
+                            Rights</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-neon"></i> 2 Revisions
+                        </li>
+                    </ul>
+
+                    <a href="contact.html"
+                        class="block w-full py-3 text-center border border-white/20 rounded-full font-bold hover:bg-white hover:text-black transition-colors">Order
+                        Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+                <p class="text-gray-500 text-sm">© 2024 N2 Marketing. All rights reserved.</p>
+                <p class="text-gray-500 text-sm font-mono border border-white/10 px-3 py-1 rounded bg-white/5">
+                    DEV BY <span class="text-brand-neon">NADULA METHSAN</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
